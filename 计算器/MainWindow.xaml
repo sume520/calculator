@@ -1,0 +1,103 @@
+﻿<Window x:Class="计算器.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        AllowsTransparency="True"
+        Title="计算器" Height="500" Width="320" Background="Transparent" BorderThickness="0" MinHeight="500" MinWidth="320" WindowStyle="None" MouseMove="Window_MouseMove">
+    <Grid>
+        <Border CornerRadius="5" BorderThickness="0" Background="#FFF0F0F0"></Border>
+        <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="90"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="3" Margin="2">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="BTN_per" Grid.Row="0" Grid.Column="0" Content="%" Margin="2" BorderThickness="0" FontSize="18"></Button>
+            <Button x:Name="BTN_extract" Grid.Row="0" Grid.Column="1" Content="√" Margin="2" BorderThickness="0" FontSize="18" Click="BTN_extract_Click"></Button>
+            <Button x:Name="BTN_square" Grid.Row="0" Grid.Column="2" Content="x²" Margin="2" BorderThickness="0" FontSize="18"></Button>
+            <Button x:Name="BTN_reci" Grid.Row="0" Grid.Column="3" Content="¹/x" Margin="2" BorderThickness="0" FontSize="18"></Button>
+            <Button x:Name="BTN_clearinput" Grid.Row="1" Grid.Column="0" Content="CE" Margin="2" BorderThickness="0" FontSize="18" Click="BTN_clearinput_Click"></Button>
+            <Button x:Name="BTN_clearall" Grid.Row="1" Grid.Column="1" Content="C" Margin="2" BorderThickness="0" FontSize="18" Click="BTN_clearall_Click"></Button>
+            <Button x:Name="BTN_back" Grid.Row="1" Grid.Column="2" Content="←" Margin="2" BorderThickness="0" FontSize="18" Click="Button_Click_10"></Button>
+            <Button x:Name="BTN_divede" Grid.Row="1" Grid.Column="3" Content="÷" Margin="2" BorderThickness="0" FontSize="18" TouchEnter="BTN_divede_TouchEnter" Click="BTN_divede_Click"></Button>
+            <Button x:Name="BTN_num7" Grid.Row="2" Grid.Column="0" Content="7" Margin="2" BorderThickness="0" FontSize="18" FontWeight="Bold" Click="Button_Click_6" Background="#FF803AB7"></Button>
+            <Button x:Name="BTN_num8" Grid.Row="2" Grid.Column="1" Content="8" Margin="2" BorderThickness="0" FontSize="18" FontWeight="Bold"  Click="Button_Click_7" Background="#FF803AB7"></Button>
+            <Button x:Name="BTN_num9" Grid.Row="2" Grid.Column="2" Content="9" Margin="2" BorderThickness="0" FontSize="18" FontWeight="Bold"  Click="Button_Click_8" Background="#FF803AB7"></Button>
+            <Button x:Name="BTN_mul" Grid.Row="2" Grid.Column="3" Content="×" Margin="2" BorderThickness="0" FontSize="18" Click="BTN_mul_Click"></Button>
+            <Button x:Name="BTN_num4" Grid.Row="3" Grid.Column="0" Content="4" Margin="2" BorderThickness="0" FontSize="18" FontWeight="Bold"   Click="Button_Click_3" Background="#FF803AB7"></Button>
+            <Button x:Name="BTN_num5" Grid.Row="3" Grid.Column="1" Content="5" Margin="2" BorderThickness="0" FontSize="18" FontWeight="Bold"  Click="Button_Click_4" Background="#FF803AB7"></Button>
+            <Button x:Name="BTN_num6" Grid.Row="3" Grid.Column="2" Content="6" Margin="2" BorderThickness="0" FontSize="18" FontWeight="Bold"   Click="Button_Click_5" Background="#FF803AB7"></Button>
+            <Button x:Name="BTN_sub" Grid.Row="3" Grid.Column="3" Content="-" Margin="2" BorderThickness="0" FontSize="18" Click="BTN_sub_Click" ></Button>
+            <Button x:Name="BTN_num1" Grid.Row="4" Grid.Column="0" Content="1" Margin="2" BorderThickness="0" FontSize="18" FontWeight="Bold"   Click="Button_Click" Background="#FF803AB7"></Button>
+            <Button x:Name="BTN_num2" Grid.Row="4" Grid.Column="1" Content="2" Margin="2" BorderThickness="0" FontSize="18" FontWeight="Bold"  Click="Button_Click_1" Background="#FF803AB7"></Button>
+            <Button x:Name="BTN_num3" Grid.Row="4" Grid.Column="2" Content="3" Margin="2" BorderThickness="0" FontSize="18" FontWeight="Bold"   Click="Button_Click_2" Background="#FF803AB7"></Button>
+            <Button x:Name="BTN_plus" Grid.Row="4" Grid.Column="3" Content="+" Margin="2" BorderThickness="0" FontSize="18" Click="BTN_plus_Click" />
+            <Button x:Name="BTN_opposite" Grid.Row="5" Grid.Column="0" Content="±" Margin="2" BorderThickness="0" FontSize="18" Click="BTN_opposite_Click"></Button>
+            <Button x:Name="BTN_num0" Grid.Row="5" Grid.Column="1" Content="0" Margin="2" BorderThickness="0" FontSize="18" FontWeight="Bold"  Click="Button_Click_9" Background="#FF803AB7"></Button>
+            <Button x:Name="BTN_dot" Grid.Row="5" Grid.Column="2" Content="." Margin="2" BorderThickness="0" FontSize="18" Click="BTN_dot_Click"></Button>
+            <Button x:Name="BTN_result" Grid.Row="5" Grid.Column="3" Content="=" Margin="2" BorderThickness="0" FontSize="18" Click="BTN_result_Click" MouseEnter="BTN_result_MouseEnter" MouseLeave="BTN_result_MouseLeave" ></Button>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition ></ColumnDefinition>
+                <ColumnDefinition ></ColumnDefinition>
+                <ColumnDefinition ></ColumnDefinition>
+                <ColumnDefinition ></ColumnDefinition>
+                <ColumnDefinition ></ColumnDefinition>
+                <ColumnDefinition ></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" BorderThickness="0" Content="MC" Foreground="#FFCCAAE7" Background="Transparent" FontSize="12"></Button>
+                <Button Grid.Column="1" BorderThickness="0" Content="MR" Foreground="#FFCCAAE7" Background="Transparent" FontSize="12"></Button>
+                <Button Grid.Column="2" BorderThickness="0" Content="M+" Foreground="#FFCCAAE7"  Background="Transparent" FontSize="12"></Button>
+                <Button Grid.Column="3" BorderThickness="0" Content="M-" Foreground="#FFCCAAE7"  Background="Transparent" FontSize="12"></Button>
+                <Button Grid.Column="4" BorderThickness="0" Content="MS" Foreground="#FFCCAAE7"  Background="Transparent" FontSize="12"></Button>
+                <Button Grid.Column="5" BorderThickness="0" Content="M▽" Foreground="#FFCCAAE7"  Background="Transparent" FontSize="12"></Button>
+        </Grid>
+        <DockPanel Grid.Row="0">
+            <Grid>
+                <Label Content="计算器" FontSize="25" ></Label>
+            </Grid>
+                <Button Background="Transparent" HorizontalAlignment="Right" Content="×" FontSize="25" VerticalAlignment="Top" Foreground="Black" BorderThickness="0" Click="Button_Click_11"></Button>
+        </DockPanel>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" HorizontalAlignment="Right">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="290"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="TBK_num1" Grid.Row="0"  HorizontalAlignment="Right" FontSize="15" Foreground="#FF9F8BEB" ></TextBlock>
+                <TextBlock x:Name="TBK_op" Grid.Column="1" Grid.Row="0" Height="35" HorizontalAlignment="Right" FontSize="15" Foreground="#FF9F8BEB"></TextBlock>
+
+            </Grid>
+            <TextBlock x:Name="TBK_Cul" Grid.Row="1" Text="0" HorizontalAlignment="Right" FontSize="40" FontWeight="Bold" VerticalAlignment="Center" Foreground="#FF6F51E2"
+                     ></TextBlock>
+        </Grid>
+    </Grid>
+    </Grid>
+</Window>
