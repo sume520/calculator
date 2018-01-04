@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.13
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "计算器", "计算器\计算器.csproj", "{63F39781-C82B-4E5F-A478-23B597ACA491}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup2", "Setup2\Setup2.vdproj", "{A42BA34E-5357-4793-A84C-C9409D179BE0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,13 @@ Global
 		{63F39781-C82B-4E5F-A478-23B597ACA491}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63F39781-C82B-4E5F-A478-23B597ACA491}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63F39781-C82B-4E5F-A478-23B597ACA491}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A42BA34E-5357-4793-A84C-C9409D179BE0}.Debug|Any CPU.ActiveCfg = Debug
+		{A42BA34E-5357-4793-A84C-C9409D179BE0}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7A4771BE-7C5C-42EB-8342-6406E20677E5}
 	EndGlobalSection
 EndGlobal
